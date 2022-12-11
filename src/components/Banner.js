@@ -7,23 +7,22 @@ const Banner = () => {
         <div>
           <div className="space-y-4">
             <span className="text-primary">Hi, my name is</span>
-            <h1 className="text-4xl font-bold sm:text-5xl">
+            <h1 className="text-4xl font-bold sm:text-5xl text-highlighter">
               Touhidul Islam Alif
               <br />
               <span className="">Front End Web Developer</span>
             </h1>
           </div>
-
           <p className="mt-8 mb-12 text-lg">
             I like to craft solid and scalable front-end products with great
             user experiences.
           </p>
           <p>
             <a
-              className="border px-8 py-3 rounded text-lg border-primary text-primary"
+              className="my-3 md:px-4 py-3 text-grayish-blue transition-colors transform duration-500 border border-primary hover:text-primary "
               href="mailto:towhidulislamalif@gmail.com"
             >
-              Contact Me
+              Hire Me!
             </a>
           </p>
         </div>

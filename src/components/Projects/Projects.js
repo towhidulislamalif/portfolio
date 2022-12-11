@@ -1,13 +1,21 @@
 import React, { useEffect, useState } from 'react';
+// import Loading from '../loading/Loading';
 import ProjectFeed from './ProjectFeed';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  // const [loading, setLoading] = useState(false);
   useEffect(() => {
-    fetch('projects.json')
+    fetch('https://portfolio-kohl-tau-84.vercel.app/myprojects')
       .then((res) => res.json())
       .then((data) => setProjects(data));
   }, []);
+
+  // if (loading) {
+  //   return <Loading />;
+  // }
+
+  // console.log('🚀 ~ file: Projects.js:6 ~ Projects ~ projects', projects);
 
   return (
     <section id="projects" className="text-grayish-blue">
@@ -17,11 +25,9 @@ const Projects = () => {
         </div>
 
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {/* lorem */}
           {projects.map((project) => (
-            <ProjectFeed key={project.project_id} project={project} />
+            <ProjectFeed key={project._id} project={project} />
           ))}
-          {/* lorem */}
         </div>
       </div>
     </section>

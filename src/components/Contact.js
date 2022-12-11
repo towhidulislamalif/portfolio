@@ -27,10 +27,7 @@ const Contact = () => {
       );
   };
   return (
-    <div
-      id="contact"
-      className="grid max-w-screen-xl grid-cols-1 gap-8 px-4 py-16 md:py-32 md:px-16 mx-auto rounded-lg md:grid-cols-2 lg:px-16 xl:px-32"
-    >
+    <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-4 py-16 md:py-32 md:px-16 mx-auto rounded-lg md:grid-cols-2 lg:px-16 xl:px-32">
       <div className="flex flex-col justify-between">
         <div className="space-y-2">
           <h2 className="text-4xl font-bold leading-tight lg:text-5xl text-highlighter">
@@ -41,7 +38,6 @@ const Contact = () => {
             back to you as soon as possible
           </div>
         </div>
-        {/* <img src="assets/svg/doodle.svg" alt="" className="p-6 h-52 md:h-64" /> */}
       </div>
       <form
         ref={form}
@@ -50,11 +46,11 @@ const Contact = () => {
         className="space-y-6 ng-untouched ng-pristine ng-valid"
       >
         <div>
-          <label htmlFor="name" className="text-sm text-grayish-blue">
+          <label htmlFor="user_name" className="text-sm text-grayish-blue">
             Full name
           </label>
           <input
-            id="name"
+            id="user_name"
             name="user_name"
             type="text"
             required
@@ -63,11 +59,11 @@ const Contact = () => {
           />
         </div>
         <div>
-          <label htmlFor="email" className="text-sm text-grayish-blue">
+          <label htmlFor="user_email" className="text-sm text-grayish-blue">
             Email
           </label>
           <input
-            id="email"
+            id="user_email"
             name="user_email"
             type="email"
             required
@@ -89,7 +85,7 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className="p-3 text-sm font-bold tracking-wide uppercase bg-transparent border border-primary  text-grayish-blue"
+          className=" my-3 px-4 py-3 text-lg text-grayish-blue transition-colors transform duration-500 border border-primary hover:text-primary "
         >
           Submit
         </button>
